@@ -9,3 +9,105 @@
 body{
     background-color: #BCBCBC;
 }
+
+h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #262626;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+p{
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+span{
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.horizontal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.horizontal-card {
+    width: 579px;
+    min-height: 670px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-card img {
+    width: 579.02px;
+    height: 278.09px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.card-content img {
+    width: 65.67px;
+    height: 50.77px;
+    border-radius: 100px;
+    width: 65.67385864257812;
+    opacity: 1;
+}
+
+.tag {
+    position: absolute;
+    top: 25.38px;
+    left: 34.12px;
+    width: 175.44px;
+    height: 36.49px;
+    border-radius: 40px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/*done*/
+.vertical img {
+    width: 547.51px;
+    height: 367.41px;
+    left: 118px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+/*done*/
+.vertical {
+    display: grid;
+    flex-direction: column;
+}
+
+
+.vertical-card {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    gap: 50px;
+    flex-grow: 1;
+}
