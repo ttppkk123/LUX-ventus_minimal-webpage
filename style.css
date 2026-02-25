@@ -31,7 +31,6 @@ h3{
 /* Font for article texts */
 p{
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -47,13 +46,12 @@ p{
 .horizontal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 44px;
     margin-bottom: 88.2px; /* space between horizontal and vertical cards */
 }
 
 
 .horizontal-card {
-    width: 579px;
     min-height: 670px;
     background-color: #FFFFFF;
     border-radius: 20px;
@@ -65,19 +63,11 @@ p{
 }
 
 .horizontal-card img {
-    width: 579px;
+    width: 100%;
     height: 278.09px;
     border-radius: 20px;
     object-fit: cover;
     flex-shrink: 0;
-}
-
-.vertical-card img {
-    width: 547.51px;
-    height: 367.41px;
-    border-radius: 20px;
-    object-fit: cover; 
-    flex-shrink: 0; 
 }
 
 .vertical {
@@ -96,8 +86,16 @@ p{
     overflow: hidden;
     position: relative;
     box-shadow: 0px 6px 6px 0px #0000000D;
-    min-height: 368px;
+    height: 368px;
     border-radius: 20px;
+}
+
+.vertical-card img {
+    width: 547.51px;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover; 
+    flex-shrink: 0; 
 }
 
 .card-content img {
@@ -115,7 +113,7 @@ p{
 
 }
 
-/*formatting of the tags on articles according to Figma*/
+/* Formatting of the tags on articles according to Figma*/
 .tag {
     position: absolute;
     width: 175.44px;
@@ -142,12 +140,12 @@ p{
     left: 34.14px;
 }
 
-/*adding hovering effect on tags - white border around*/
+/* Adding hovering effect on tags - white border around*/
 .tag:hover{
     border: 2px solid #FFFFFF;
 }
 
-/*formating of the details (author, date) on articles*/
+/* Formating of the details (author, date) on articles*/
 .details{
     display: flex;
     flex-direction: row;
@@ -155,7 +153,6 @@ p{
     color: #BCBCBC;
     font-size: 14px;
     font-weight: 400;
-    font-style: Regular;
     line-height: 100%;
     letter-spacing: 0%;
     gap: 60px;
@@ -176,7 +173,6 @@ p{
 .read-more img {
     width: 21.25px;
     height: 13px;
-    border: 2.3px;
 }
 
 .read-more span {
@@ -190,19 +186,25 @@ p{
 .read-more {
     margin-top: 30px;
     display: inline-flex;
-    align-items: left;
+    align-items: flex-start;
     gap: 10px;
     cursor: pointer;
+    
+    transition: transform 0.3s ease;
 }
 
-/*adding hovering effect on read more - increase in size*/
+/* Adding hovering effect on "read more" links - increase in size*/
 .read-more:hover{
     transform: scale(1.1);
 }
 
+.read-more:hover img {
+    transform: translateX(5px);
+}
+
 .horizontal-card {
     width: 100%;
-    max-width: 579px;
+    max-width: 580px;
 }
 
 .vertical-card {
