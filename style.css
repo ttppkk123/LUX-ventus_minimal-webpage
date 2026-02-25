@@ -10,7 +10,7 @@ body{
     background-color: #F9F9F9;
 }
 
-/*font for sections*/
+/* Font for section titles */
 h2{
     font-weight: 700;
     font-size: 32px;
@@ -19,7 +19,7 @@ h2{
     color: #262626;
 }
 
-/*font for article titles*/
+/* Font for article titles */
 h3{
     font-weight: 700;
     font-size: 26px;
@@ -28,7 +28,7 @@ h3{
     letter-spacing: 0%;
 }
 
-/*font for article texts*/
+/* Font for article texts */
 p{
     font-weight: 400;
     font-style: Regular;
@@ -38,24 +38,19 @@ p{
     color: #262626;
 }
 
-span{
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-
+/* Adding space between title and horizontal cards */
 .articles h2 {
-    margin-bottom: 55.04px; /* space between title and horizontal cards */
+    margin-bottom: 55.04px; 
 }
 
+/* Adding first two articles in a horizontal view */
 .horizontal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
     margin-bottom: 88.2px; /* space between horizontal and vertical cards */
 }
+
 
 .horizontal-card {
     width: 579px;
