@@ -4,13 +4,22 @@
     box-sizing: border-box;
     font-family: Poppins;
     text-decoration: none;
-    max-width: 1440;
 }
 
 body{
-    background-color: #BCBCBC;
+    background-color: #F9F9F9;
 }
 
+/*font for sections*/
+h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/*font for article titles*/
 h3{
     font-weight: 700;
     font-size: 26px;
@@ -19,6 +28,7 @@ h3{
     letter-spacing: 0%;
 }
 
+/*font for article texts*/
 p{
     font-weight: 400;
     font-style: Regular;
@@ -34,13 +44,17 @@ span{
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;
+}
 
+.articles h2 {
+    margin-bottom: 55.04px; /* space between title and horizontal cards */
 }
 
 .horizontal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+    margin-bottom: 88.2px; /* space between horizontal and vertical cards */
 }
 
 .horizontal-card {
@@ -74,9 +88,11 @@ span{
     display: flex;          
     flex-direction: column;
     gap: 58px;
+    margin-bottom: 88.2px; /* space between vertical cards and footer */
 }
 
 .vertical-card {
+    width: 1204px;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -104,10 +120,9 @@ span{
     gap: 20px;
 }
 
+/*formatting of the tags on articles according to Figma*/
 .tag {
     position: absolute;
-    top: 25.38px;
-    left: 34.12px;
     width: 175.44px;
     height: 36.49px;
     border-radius: 40px;
@@ -122,6 +137,22 @@ span{
     cursor: pointer;
 }
 
+.horizontal-card .tag {
+    top: 20.67px;
+    left: 34.14px;
+}
+
+.vertical-card .tag {
+    top: 25.37px;
+    left: 34.14px;
+}
+
+/*adding hovering effect on tags - white border around*/
+.tag:hover{
+    border: 2px solid #FFFFFF;
+}
+
+/*formating of the details (author, date) on articles*/
 .details{
     display: flex;
     flex-direction: row;
@@ -130,5 +161,17 @@ span{
 }
 
 .articles {
-    max-width: calc(100% - 236px);
+    max-width: 1204px; 
+    margin: 0 auto;
+    padding: 0 118px;
+}
+
+.horizontal-card {
+    width: 100%;
+    max-width: 579px;
+}
+
+.vertical-card {
+    width: 100%;
+    max-width: 1204px;
 }
