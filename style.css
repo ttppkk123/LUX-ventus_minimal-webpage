@@ -10,7 +10,11 @@ body{
     background-color: #F9F9F9;
 }
 
-/* Font for section titles */
+/*-----------------------------------------------
+  Typography 
+-----------------------------------------------*/
+
+/* Section titles */
 h2{
     font-weight: 700;
     font-size: 32px;
@@ -19,7 +23,7 @@ h2{
     color: #262626;
 }
 
-/* Font for article titles */
+/* Article titles */
 h3{
     font-weight: 700;
     font-size: 26px;
@@ -28,7 +32,7 @@ h3{
     letter-spacing: 0%;
 }
 
-/* Font for article texts */
+/* Article texts */
 p{
     font-weight: 400;
     font-size: 16px;
@@ -37,22 +41,41 @@ p{
     color: #262626;
 }
 
-/* Adding space between title and horizontal cards */
+/* Space between section title and horizontal cards */
 .articles h2 {
     margin-bottom: 55.04px; 
 }
 
-/* Adding first two articles in a horizontal view */
-.horizontal {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 44px;
-    margin-bottom: 88.2px; /* space between horizontal and vertical cards */
+/*-----------------------------------------------
+  Articles Section Container
+-----------------------------------------------*/
+
+/* Formatting articles section and assigning minimum and maximum width */
+.articles {
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 0 auto;
+    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
 
+/*-----------------------------------------------
+  Horizontal Cards (Top 2 Articles)
+-----------------------------------------------*/
 
+/* Adding first two articles in a horizontal view */
+.horizontal {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards */
+    gap: 44px; /* Gap between cards */
+    justify-content: center; /* Center cards horizontally */
+    margin-bottom: 88.2px; /* Space between horizontal and vertical cards */
+}
+
+/* Formatting horizontal cards */
 .horizontal-card {
-    min-height: 670px;
+    flex: 1 1 calc((100% - 44px)/2); /* Two cards per row minus gap */
+    min-width: 280px; /* Prevents shrinking below 280px */
+    min-height: 670px; /* Prevents shrinking below 670px */
     background-color: #FFFFFF;
     border-radius: 20px;
     overflow: hidden;
@@ -60,27 +83,37 @@ p{
     box-shadow: 0px 6px 6px 0px #0000000D;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 691.22px; /* Limits max width of each card */
 }
 
+/* Formatting images in the horizontal cards */
 .horizontal-card img {
     width: 100%;
     height: 278.09px;
     border-radius: 20px;
     object-fit: cover;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
+/*-----------------------------------------------
+  Vertical Cards (Last 3 Articles)
+-----------------------------------------------*/
+
+/* Adding last three articles in a vertical view */
 .vertical {
     display: flex;          
     flex-direction: column;
-    gap: 58px;
-    margin-bottom: 88.2px; /* space between vertical cards and footer */
+    gap: 58px; /* Gap between cards */
+    margin-bottom: 88.2px; /* Space between vertical cards and footer */
 }
 
+/* Formatting vertical cards */
 .vertical-card {
     display: flex;
-    flex-direction: row;
-    gap: 45.49px;
+    flex-direction: row; /* Image and content side by side */
+    gap: 45.49px; /* Gap between image and article */
     flex-grow: 1;
     background-color: #FFFFFF;
     overflow: hidden;
@@ -90,14 +123,99 @@ p{
     border-radius: 20px;
 }
 
+/* Formatting images in the vertical cards */
 .vertical-card img {
     width: 547.51px;
     height: 100%;
     border-radius: 20px;
     object-fit: cover; 
-    flex-shrink: 0; 
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
+/*-----------------------------------------------
+  Media Queries to fit different screens
+-----------------------------------------------*/
+
+/* Mobile and Tablets */
+@media screen and (max-width: 768px) {
+    /* Stacks horizontal cards vertically */
+    .horizontal {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px; 
+    }
+
+    /* Gives horizontal cards full width */
+    .horizontal-card {
+        flex: 1 1 100%;           
+        min-width: 0;             
+    }
+
+    /* Gives vertical cards full width */
+    .vertical {
+        flex: 1 1 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .vertical-card {
+        flex: 1 1 100%;  
+        gap: 0px;         
+        min-width: 0px; 
+        min-height: 670px;
+        flex-direction: column; /* Stacks image above content */
+        width: 100%;
+        max-width: 691.22px;
+    }
+
+    /* Vertical card images responsive */
+    .vertical-card img {
+        width: 100%;
+        height: 278.09px;
+    }
+
+    /* Card content fills remaining space */
+    .card-content {
+        flex: 1;
+    }
+
+    /* Removes extra margin on details */
+    .details {
+        margin-top: 0;
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .vertical-card {
+        flex-direction: column; /* Stacks image above content */
+        height: auto;
+        gap: 20px;
+    }
+
+    .vertical-card img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .card-content {
+        flex: 1;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .details {
+        margin-top: 0px;
+        gap: 30px;
+        padding: 0px;
+    }
+}
+
+/*-----------------------------------------------
+  Card Content and Author
+-----------------------------------------------*/
+
+/* Formatting image of the author inserted in the card content */
 .card-content img {
     width: 65.67px;
     height: 50.77px;
@@ -105,13 +223,38 @@ p{
     opacity: 1;
 }
 
+/* Formatting card content */
 .card-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
+
+/* Formatting of the details (author, date) on articles*/
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 60px;
+    margin-top: 23.34px;
+}
+
+/* Positioning author section (image and name) */
+.author{
+    display: flex;
+    align-items: center;
+    gap: 16.86px;
+}
+
+/*-----------------------------------------------
+  Tags
+-----------------------------------------------*/
 
 /* Formatting of the tags on articles according to Figma*/
 .tag {
@@ -130,11 +273,13 @@ p{
     cursor: pointer;
 }
 
+/* Tag positions on horizontal cards*/
 .horizontal-card .tag {
     top: 20.67px;
     left: 34.14px;
 }
 
+/* Tag positions on vertical cards */
 .vertical-card .tag {
     top: 25.37px;
     left: 34.14px;
@@ -145,36 +290,17 @@ p{
     border: 2px solid #FFFFFF;
 }
 
-/* Formating of the details (author, date) on articles*/
-.details{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #BCBCBC;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: 0%;
-    gap: 60px;
-    margin-top: 23.34px;
-}
+/*-----------------------------------------------
+  "Read More" Button
+-----------------------------------------------*/
 
-.author{
-    display: flex;
-    align-items: center;
-    gap: 16.86px;
-}
-
-.articles {
-    margin: 0 auto;
-    padding: 0 118px;
-}
-
+/* Formatting "read more" image */
 .read-more img {
     width: 21.25px;
     height: 13px;
 }
 
+/* Formatting "read more" text */
 .read-more span {
     font-weight: 700;
     font-size: 12px;
@@ -183,13 +309,13 @@ p{
     color: #4CE0D7;
 }
 
+/* Formatting "read more" button */
 .read-more {
     margin-top: 30px;
     display: inline-flex;
     align-items: flex-start;
     gap: 10px;
     cursor: pointer;
-    
     transition: transform 0.3s ease;
 }
 
@@ -200,14 +326,4 @@ p{
 
 .read-more:hover img {
     transform: translateX(5px);
-}
-
-.horizontal-card {
-    width: 100%;
-    max-width: 580px;
-}
-
-.vertical-card {
-    width: 100%;
-    max-width: 1204px;
 }
