@@ -32,6 +32,12 @@ h3{
     letter-spacing: 0%;
 }
 
+/* Adding hovering effect on articles */
+.horizontal-card h3:hover,
+.vertical-card h3:hover {
+    color: #4CE0D7; 
+}
+
 /* Article texts */
 p{
     font-weight: 400;
@@ -219,8 +225,13 @@ p{
 .card-content img {
     width: 65.67px;
     height: 50.77px;
-    border-radius: 100px;
+    border-radius: 50%;
     opacity: 1;
+}
+
+/* Adding hovering effect on author's image*/
+.card-content img:hover{
+    transform: scale(1.1);
 }
 
 /* Formatting card content */
@@ -243,6 +254,17 @@ p{
     letter-spacing: 0%;
     gap: 60px;
     margin-top: 23.34px;
+}
+
+/* Formatting color of author's name*/
+.author-name {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Adding hovering effect on author's name*/
+.author-name:hover{
+    color: #262626;
 }
 
 /* Positioning author section (image and name) */
