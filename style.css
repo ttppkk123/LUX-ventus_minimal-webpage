@@ -14,7 +14,9 @@ body{
     padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
   
-
+/*-----------------------------------------------
+  About section
+-----------------------------------------------*/
 
 /*Formatting about card*/
 .about-card{
@@ -43,6 +45,8 @@ body{
     object-position: top right;
     filter: brightness(60%); /* 60% brightness = darker */
 }
+
+/* Text placement in about section */
 .about-text {
     display: flex;
     flex-direction: column;
@@ -62,6 +66,7 @@ body{
     letter-spacing: 23%;
 }
 
+/* Formatting text in the about card */
 .header2 {
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
@@ -72,6 +77,7 @@ body{
     max-width: 650px;
 }
 
+/* Formatting text in the about card */
 .header3 {
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
@@ -82,6 +88,7 @@ body{
     max-width: 494px;
 }
 
+/* Formatting text in the about card */
 .ventus{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -93,13 +100,11 @@ body{
     color: transparent;
 }
 
-
 /*-----------------------------------------------
-  "Read More" Button
+  Latest trends section
 -----------------------------------------------*/
   
-  
- /*Formatting latest trends card*/
+/*Formatting latest trends card*/
 .latest-trends-card{
     display: flex;
     flex-wrap: wrap; /* Wrap card */
@@ -374,14 +379,6 @@ p{
 /*-----------------------------------------------
   Articles Section Container
 -----------------------------------------------*/
-
-/* Formatting articles section and assigning minimum and maximum width */
-.articles {
-    max-width: 1440px; /* Maximum page width */
-    min-width: 320px; /* Minimum page width */
-    margin: 0 auto;
-    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
-}
 
 /*-----------------------------------------------
   Horizontal Cards (Top 2 Articles)
