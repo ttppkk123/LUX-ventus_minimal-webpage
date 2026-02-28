@@ -9,4 +9,147 @@
 body{
     background-color: #F9F9F9;
 }
+body{
+    background-color: #BCBCBC;
+    margin: 52.5px;
+    justify-content: center;
+}
+.big-container{
+    background-color: #fff;
+    width: 1204px;
+    height: 698px;
+    justify-content: center;
+    margin-right: 118px;
+     margin-left: 118px;
+     border-radius: 20px;
+}
+.btn {
+    position: absolute;
+width: 233.95px;
+height: 36.49px;
+ border-radius: 40px;
+ background-color: rgba(38, 38, 38, 1);
+ margin-left:47.27px ;
+ margin-right:922.4px ;
+  margin-top: 23.34px;
+ 
+}
+.photo1{
+    width:1204px ;
+    height: 360.3px;
+    object-fit: cover;
+    border-radius: 20px;
+   
+}
+.small-title {
+    display: flex;
+    align-items: center;
+    width: 1204px;
+}
+.image {
+    object-fit: cover;
+    width: 65.67385864257812px;
+    height:50.76639175415039px;
+    border-radius: 50%;
+    margin-left:64px;
+    margin-top: 15px;
+}
+.card-title-2 {
+    display: flex;
+}
+.card-text-1 {
+    display: flex;
+    align-items: center;
+    width: 168px;
+ height: 21px;
+ top: 1678px;
+ opacity: 1;
+ font-family: Poppins;
+ font-weight: 400;
+ font-style: Regular;
+ font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(188, 188, 188, 1);
+margin-left: 269px;
+gap: 49px;
+margin-right: 389px;
+  white-space: nowrap;
+}
+.small-card {
+    width: 216px;
+height: 23px;
+top: 1680px;
+left: 1042px;
+opacity: 1;
+font-family: Poppins;
+font-weight: 700;
+font-style: Bold;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 24%;
+color: rgba(242, 94, 94, 1);
+ 
+}
+.card-text {
+    flex-direction: column;
+    margin-left: 64px;
+    margin-top: 30px;
+    width: 1033px;
+}
+.main-title {
+width: 1044px;
+height: 36px;
+top: 1744px;
+left: 182px;
+opacity: 1;
+font-family: Poppins;
+font-weight: 700;
+font-style: Bold;
+font-size: 26px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.paragraph{
+    width: 1033px;
+height: 73px;
+top: 1803px;
+left: 182px;
+opacity: 1;
+font-family: Poppins;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-bottom:32px;
+    margin-left:51px ;
+    padding: 10px;
+}
+.image-1{
+    width: 51px;
+    height: 40px;
+    align-items: center;
+   
+}
+.nav-item {
+    width: 215px;
+height: 24px;
+top: 1916px;
+left: 231px;
+opacity: 1;
+font-family: Poppins;
+font-weight: 700;
+font-style: Bold;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 24%;
+color: rgba(76, 224, 215, 1);
+align-items: center;
+}
 
