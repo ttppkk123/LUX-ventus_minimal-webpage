@@ -10,127 +10,107 @@ body{
     background-color: #F9F9F9;
 }
 
-
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-
-
-/* styleing section */
-
-
-.h1 h1 {
-    color: #262626;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 32px;
-    line-height: 100%;
-
-}
-
+/*-----------------------------------------------
+  Topics Section
+-----------------------------------------------*/
 
 .topics {
-    display: flex;
-    flex-direction: column;
-    padding-top: 73px;
-    padding-left: 84px;
-    
-
-    
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 0 auto;
+    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
 
+/* Section title styling  */
+.section-title h2 {
+    color: #262626;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+}
 
+/* Formatting topics container*/
+.topics-container {
+    display: flex;
+    flex-direction: column;
+}
 
+/* Formatting container for all cards */
 .cards {
     display: flex;
     flex-direction: row;
     padding-top: 48px;
-    gap: 10px;
-    justify-content:space-evenly ;
-    
-    
+    gap: 10px; /*Space between cards*/
+    justify-content:space-evenly; /* Center cards with even spacing */
 }
 
-
-
-.saerto h1 {
+/* Formatting text for all cards */
+.common h1 {
     color: #262626;
     font-weight: 700;
-    font-style: Bold;
     font-size: 12px;
     line-height: 100%;
 }
 
-
-
-
-
-
-.saerto img {
+/* Formatting images for all cards */
+.common img {
     width: 88px;
     height: 88px;
-
-
 }
 
-.saerto {
+/* Formatting cards */
+.common {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 32px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     background-color: #FFFFFF;
     border-radius: 20px;
-    padding: 30px 30px;
-    transition: .5s;
-    
+    transition: .5s; 
 }
 
-
-.saerto p {
+/* Formatting "view more" for all cards */
+.view-more {
     color: #262626;
     font-weight: 700;
-    font-style: bold;
     font-size: 12px;
     line-height: 100%;
     padding: 8px 24px;
     border-radius: 40px;
+    border: none;
     background-color: #4CE0D7;
     transition: .3s;
     padding-left: 38px;
     padding-right: 38px;
 }
 
-
-.saerto p:hover {
+/* Adding hover effect on "view more" button */
+.view-more:hover {
     color: #4CE0D7;
     background-color: gray;
 }
 
-
-
-.saerto:hover {
+/* Adding hover effect on cards */
+.common:hover {
     background-color: lightgray;
 }
 
+/* Adding responsive design for small screens*/
+@media (max-width: 767px) {
+    .common {
+        gap: 10px;
+    }
 
-@media (max-width: 700px) {
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    
-  }
-  .topics {
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;   
-  }
+    .cards {
+    gap: 5px;
+    }
+
+    .view-more {
+        padding-left: 10px;
+        padding-right: 10px;  
+    }
 }
-
 
