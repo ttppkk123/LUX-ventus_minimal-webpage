@@ -10,3 +10,127 @@ body{
     background-color: #F9F9F9;
 }
 
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+
+/* styleing section */
+
+
+.h1 h1 {
+    color: #262626;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    line-height: 100%;
+
+}
+
+
+.topics {
+    display: flex;
+    flex-direction: column;
+    padding-top: 73px;
+    padding-left: 84px;
+    
+
+    
+}
+
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    padding-top: 48px;
+    gap: 10px;
+    justify-content:space-evenly ;
+    
+    
+}
+
+
+
+.saerto h1 {
+    color: #262626;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+
+
+
+
+
+.saerto img {
+    width: 88px;
+    height: 88px;
+
+
+}
+
+.saerto {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 30px;
+    transition: .5s;
+    
+}
+
+
+.saerto p {
+    color: #262626;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 12px;
+    line-height: 100%;
+    padding: 8px 24px;
+    border-radius: 40px;
+    background-color: #4CE0D7;
+    transition: .3s;
+    padding-left: 38px;
+    padding-right: 38px;
+}
+
+
+.saerto p:hover {
+    color: #4CE0D7;
+    background-color: gray;
+}
+
+
+
+.saerto:hover {
+    background-color: lightgray;
+}
+
+
+@media (max-width: 700px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+  }
+  .topics {
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;   
+  }
+}
+
+
