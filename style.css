@@ -9,147 +9,234 @@
 body{
     background-color: #F9F9F9;
 }
-body{
-    background-color: #BCBCBC;
-    margin: 52.5px;
-    justify-content: center;
+
+/* Formatting latest trends section and assigning minimum and maximum width */
+.latest-trends {
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 0 auto;
+    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
-.big-container{
-    background-color: #fff;
-    width: 1204px;
-    height: 698px;
-    justify-content: center;
-    margin-right: 118px;
-     margin-left: 118px;
-     border-radius: 20px;
+
+/*Formatting latest trends card*/
+.latest-trends-card{
+    display: flex;
+    flex-wrap: wrap; /* Wrap card */
+    justify-content: center; /* Center card horizontally */
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    margin-bottom: 97px; /* Space to the next section */
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+/* Formatting images in the latest trends cards */
+.latest-trends img{
+    width:100% ;
+    height: 360.3px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents shrinking */
 }
+
+/* Formatting of the tags on the latest trends article according to Figma*/
 .btn {
     position: absolute;
-width: 233.95px;
-height: 36.49px;
- border-radius: 40px;
- background-color: rgba(38, 38, 38, 1);
- margin-left:47.27px ;
- margin-right:922.4px ;
-  margin-top: 23.34px;
- 
+    width: 233.95px;
+    height: 36.49px;
+    border-radius: 40px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    left:47.27px;
+    top: 23.34px;
 }
-.photo1{
-    width:1204px ;
-    height: 360.3px;
-    object-fit: cover;
-    border-radius: 20px;
-   
+
+/* Adding hovering effect on tags - white border around*/
+.btn:hover{
+    border: 2px solid #FFFFFF;
 }
-.small-title {
+
+/* Formatting card content */
+.latest-trends-content {
+    margin-top: 23.34px;
+    padding-left: 64.34px;
+    padding-right: 64.34px;
     display: flex;
-    align-items: center;
-    width: 1204px;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 1;
 }
-.image {
-    object-fit: cover;
-    width: 65.67385864257812px;
-    height:50.76639175415039px;
-    border-radius: 50%;
-    margin-left:64px;
-    margin-top: 15px;
-}
-.card-title-2 {
-    display: flex;
-}
-.card-text-1 {
-    display: flex;
-    align-items: center;
-    width: 168px;
- height: 21px;
- top: 1678px;
- opacity: 1;
- font-family: Poppins;
- font-weight: 400;
- font-style: Regular;
- font-size: 14px;
-line-height: 100%;
-letter-spacing: 0%;
-color: rgba(188, 188, 188, 1);
-margin-left: 269px;
-gap: 49px;
-margin-right: 389px;
-  white-space: nowrap;
-}
+
+/* Formatting coming it hot text */
 .small-card {
     width: 216px;
-height: 23px;
-top: 1680px;
-left: 1042px;
-opacity: 1;
-font-family: Poppins;
-font-weight: 700;
-font-style: Bold;
-font-size: 14px;
-line-height: 100%;
-letter-spacing: 24%;
-color: rgba(242, 94, 94, 1);
- 
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 24%;
+    color: #F25E5E;
+    margin-left: auto;
 }
+
 .card-text {
     flex-direction: column;
-    margin-left: 64px;
-    margin-top: 30px;
-    width: 1033px;
 }
-.main-title {
-width: 1044px;
-height: 36px;
-top: 1744px;
-left: 182px;
-opacity: 1;
-font-family: Poppins;
-font-weight: 700;
-font-style: Bold;
-font-size: 26px;
-line-height: 100%;
-letter-spacing: 0%;
-}
-.paragraph{
-    width: 1033px;
-height: 73px;
-top: 1803px;
-left: 182px;
-opacity: 1;
-font-family: Poppins;
-font-weight: 400;
-font-style: Regular;
-font-size: 16px;
-line-height: 100%;
-letter-spacing: 0%;
 
+/* Formatting of the details (author, date) on articles*/
+.details-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-.navbar {
+
+
+
+
+/*---------------------------------------*/
+
+/*-----------------------------------------------
+  "Read More" Button
+-----------------------------------------------*/
+
+/* Formatting "read more" image */
+.read-more img {
+    width: 21.25px;
+    height: 13px;
+}
+
+/* Formatting "read more" text */
+.read-more span {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 24%;
+    color: #4CE0D7;
+}
+
+/* Formatting "read more" button */
+.read-more {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Adding hovering effect on "read more" links - increase in size*/
+.read-more:hover{
+    transform: scale(1.1);
+}
+
+.read-more:hover img {
+    transform: translateX(5px);
+}
+
+/* Article texts */
+.p{
+font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/* Article titles */
+h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #262626;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 23px;
+}
+
+/* Formatting of the details (author, date) on articles*/
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 60px;
+}
+
+
+
+/* Formatting image of the author inserted in the card content */
+.author img {
+    width: 65.67px;
+    height: 50.77px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* Adding hovering effect on author's image*/
+.author img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Formatting color of author's name*/
+.author-name {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Adding hovering effect on author's name*/
+.author-name:hover{
+    color: #262626;
+    cursor: pointer;
+}
+
+/* Positioning author section (image and name) */
+.author{
     display: flex;
     align-items: center;
-    margin-bottom:32px;
-    margin-left:51px ;
-    padding: 10px;
-}
-.image-1{
-    width: 51px;
-    height: 40px;
-    align-items: center;
-   
-}
-.nav-item {
-    width: 215px;
-height: 24px;
-top: 1916px;
-left: 231px;
-opacity: 1;
-font-family: Poppins;
-font-weight: 700;
-font-style: Bold;
-font-size: 12px;
-line-height: 100%;
-letter-spacing: 24%;
-color: rgba(76, 224, 215, 1);
-align-items: center;
+    gap: 16.86px;
 }
 
+
+
+/*---------------------------------------*/
+
+
+/* Mobile and Tablets */
+@media screen and (max-width: 767px) {
+    
+    .latest-trends-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Stack author/date and "COMING IN HOT!" vertically */
+    .details-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .details{
+        margin-top: 0;
+    }
+    .small-card {
+        margin-left: 0;
+        width: auto;
+        padding: 5px;
+    }
+}
