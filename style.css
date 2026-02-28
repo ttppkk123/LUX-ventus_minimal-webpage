@@ -225,7 +225,7 @@ p{
 .card-content img {
     width: 65.67px;
     height: 50.77px;
-    border-radius: 100px;
+    border-radius: 50%;
     opacity: 1;
 }
 
