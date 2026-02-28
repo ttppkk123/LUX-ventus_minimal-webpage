@@ -10,16 +10,24 @@ body{
     background-color: #F9F9F9;
 }
 
+/*-----------------------------------------------
+  Footer
+-----------------------------------------------*/
+
+/* Formatting footer */
 .footer{
     background-color: #FFFFFF;
     border-top-right-radius: 40px;    
     border-top-left-radius: 40px; 
     height: 308px;
-    max-width: 1440px;
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
     margin: 69px auto 0;
     padding: 87px 84px 77px;
+    box-shadow: 6px 0px 6px 0px #0000000D;
 }
 
+/* Formatting logo */
 .logo {
     font-family: Cinzel;
     font-weight: 400;
@@ -29,6 +37,7 @@ body{
     letter-spacing: 0%;
 }
 
+/* Formatiing logo span*/
 .logo span {
     background-color:rgba(76, 224, 215, 1);
     font-family: Cinzel;
@@ -39,21 +48,24 @@ body{
     letter-spacing: 0%;
 }
  
+/* Adding logo and social media items in a horizontal view */
 .nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Adding social media items in a horizontal view */
 .social-media {
     display: flex;
     align-items: center;
-    gap:13px
+    gap:13px /* Gap between text and icons */
 }
 
+/* Formatting message for social media */
 .subtitle {
     align-items: center;
-    width: 227px;
+    width: 227px; /* Giving fixed width to keep space between text and icons */
     opacity: 1;
     font-family: Poppins;
     font-weight: 700;
@@ -65,7 +77,7 @@ body{
 /* Formatting social media icons*/
 .image-cards {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Gap between icons */
     align-items: center;
     cursor: pointer;  
 }
@@ -75,44 +87,84 @@ body{
     transform: scale(1.2);
 }
 
+/* Adding divider*/
 hr {
     margin-top: 77px;
 }
 
 /* Formatting copyright text*/
 .copyright {
-    width: 413PX;
-    height: 24PX;
-    top: 4449px;
-    left: 88px;
     opacity: 1;
     font-family: Poppins;
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
     letter-spacing: 0%;  
-    margin-top: 34px;;  
+    margin-top: 34px; /* Space from divider */
 }
 
+/*-----------------------------------------------
+  Media Queries to fit different screens
+-----------------------------------------------*/
+
+/* Mobile and Tablets */
 @media (max-width: 768px) {
+    /* Stacks logo and social media vertically */
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
     }
-
+    /* Stacks text and social media icons vertically */
     .social-media {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
 
+    /* Adding space between “Let’s Hang Out” and icons */
+    .subtitle {
+    margin-bottom: 10px; 
+    }
+
+    /* Reduces gap for small screens*/
     .hr{
         margin-top: 20px;
     }
+
+    /* Reduces gap for small screens*/
     .footer {
         padding: 50px 30px;
     }
 }
 
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    /* Stacks logo and social media vertically */
+    .nav-list {
+        align-items: flex-start;
+        gap: 10px;
+    }
 
+    /* Stacks text and social media icons vertically */
+    .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Adding space between “Let’s Hang Out” and icons */
+    .subtitle {
+    margin-bottom: 10px; 
+    }
+
+    /* Reduces gap for small screens*/
+    .hr{
+        margin-top: 20px;
+    }
+
+    /* Reduces gap for small screens*/
+    .footer {
+        padding: 50px 30px;
+    }
+}
