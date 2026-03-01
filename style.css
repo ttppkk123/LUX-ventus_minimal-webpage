@@ -8,6 +8,9 @@
 
 body{
     background-color: #F9F9F9;
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 0 auto;
 }
 
 /*-----------------------------------------------
@@ -15,9 +18,6 @@ body{
 -----------------------------------------------*/
 
 .topics {
-    max-width: 1440px; /* Maximum page width */
-    min-width: 320px; /* Minimum page width */
-    margin: 0 auto;
     padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
 
@@ -69,6 +69,7 @@ body{
     cursor: pointer;
     background-color: #FFFFFF;
     border-radius: 20px;
+    padding: 30px 30px;
     transition: .5s; 
 }
 
@@ -89,8 +90,8 @@ body{
 
 /* Adding hover effect on "view more" button */
 .view-more:hover {
-    color: #4CE0D7;
-    background-color: gray;
+    color: #F9F9F9;
+    cursor: pointer;
 }
 
 /* Adding hover effect on cards */
