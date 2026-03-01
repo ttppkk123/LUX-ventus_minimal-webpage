@@ -10,99 +10,95 @@ body{
     background-color: #F9F9F9;
 }
 
-
-.container {
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px ;
-
-}
-
-
-
 /* styleing header */
-
 .header{
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    padding-top: 50px;
+    justify-content: space-between;
+    padding: 30px clamp(20px, 5vw, 80px);
+    position: relative;
 }
 
-
+/*-----------------already defined in footer */
 .logo a {
     font-family: 'Cinzel', serif;   
-  font-weight: 400;               
-  font-size: 36px;                
-  line-height: 100%;              
-  letter-spacing: 0;              
-  color: #262626;                 
-  display: inline-block;          
-  width: 226px;                   
-  height: 49px;                   
+    font-weight: 400;               
+    font-size: 36px;                
+    line-height: 100%;              
+    letter-spacing: 0;              
+    color: #262626;                 
+    display: inline-block;          
+    width: 226px;                   
+    height: 49px; 
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;                  
 }
 
+.logo span {
+    font-family: 'Cinzel', serif;  
+    background-color: #4CE0D7;
+}
 
+/* Formatting navigation bar*/
 .nav {
     display: flex;
-    flex-direction: row;
-    gap: 65px;
+    justify-content: center;
+    gap: clamp(5px, 1vw, 50px);
 }
 
-
+/* Formatting navigation bar components*/
 .nav a {
     color: #262626;
     font-weight: 700;
-    font-style: bold;
     font-size: 14px;
     line-height: 100%;
     transition: .3s;
-}
-
-.nav a:hover {
-    color:#4CE0D7 ;
-}
-
-.contact-info a {
-    color: #262626;
-    font-weight: 700;
-    font-style: bold;
-    font-size: 14px;
-    line-height: 100%;
-    transition: .3s;
-    background-color: #4CE0D7;
     padding:8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adding hovering effect on navigation bar*/
+.nav a:hover {
+    background-color: #4CE0D7;
     border-radius: 40px;
-    transition: .3s;
-
 }
 
-.contact-info a:hover {
-    color: #4CE0D7;
-    background-color: gray;
-}
-
-
-
+/* Formatting search bar icon*/
 .search-bar img {
     width: 47px;
     height: 47px;
     cursor: pointer;
-    
 }
 
-
-
-
-.logo span {
-    font-family: 'Cinzel', serif;  
-
+/* Formatting burger for small screens*/
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
     background-color: #4CE0D7;
-    
+    border-radius: 40px;
+    padding:0px 20px;
 }
 
+@media (max-width: 999px) {
+    .nav {
+        display: none;
+    }
 
+    .burger {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
+    }
+}
 
 
 
