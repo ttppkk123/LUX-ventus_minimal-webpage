@@ -80,26 +80,17 @@ body{
     position: relative;
 }
 
-/* Formatting logo */
-.logo a {
-    font-family: 'Cinzel', serif;   
-    font-weight: 400;               
-    font-size: 36px;                
-    line-height: 100%;              
-    letter-spacing: 0;              
-    color: #262626;                 
-    display: inline-block;          
-    width: 226px;                   
-    height: 49px; 
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;                  
+/* Formatting logo image */
+.logo img{
+    width: 234px;                   
+    height: 49px;  
 }
 
-.logo span {
-    font-family: 'Cinzel', serif;  
-    background-color: #4CE0D7;
+/* Positioning logo */
+.logo a {                  
+    display: flex;
+    align-items: center;
+    justify-content: center;                  
 }
 
 /* Formatting navigation bar*/
@@ -866,5 +857,34 @@ Header
     /* Formatting text in the about card */
     .ventus{
         font-size: 30px;
+    }
+
+    /* --------------
+    Logo 
+    -----------------*/
+    /* Formatting logo for mobile */
+    .logo img{
+        width: 200px;                   
+        height: 40px; 
+    }
+
+    /* Formatting burger menu for mobile */
+    .burger {
+        font-size: 22px;
+        padding:0px 16px;
+    }
+
+    /* --------------
+    Footer 
+    -----------------*/
+    /* Formatting footer for mobile */
+    .footer{
+        gap: 5px;
+        padding: 20px 20px 20px;
+    }
+
+    /* Formatting social media text for mobile */
+    .subtitle {
+        font-size: 22px;
     }
 }
