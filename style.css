@@ -15,7 +15,52 @@ body{
 }
   
 /*-----------------------------------------------
-  About section
+  Typography 
+-----------------------------------------------*/
+
+/* Formatting section titles */
+.articles h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/* Formatting article titles */
+.card-text h3, 
+.card-content h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #262626;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Adding hovering effect on articles */
+.horizontal-card h3:hover,
+.vertical-card h3:hover,
+.card-text h3:hover {
+    color: #4CE0D7; 
+}
+
+/* Article texts */
+.card-text p, 
+.card-content p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/* Space between section title and horizontal cards */
+.articles h2 {
+    margin-bottom: 55.04px; 
+}
+
+/*-----------------------------------------------
+  Header section
 -----------------------------------------------*/
 
 /* styleing header */
@@ -29,7 +74,7 @@ body{
     position: relative;
 }
 
-/*-----------------already defined in footer */
+/* Formatting logo */
 .logo a {
     font-family: 'Cinzel', serif;   
     font-weight: 400;               
@@ -94,24 +139,6 @@ body{
     padding:0px 20px;
 }
 
-@media (max-width: 999px) {
-    .nav {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .search-bar {
-        display: none;
-    }
-}
-
-
-
-
-
 /*-----------------------------------------------
   About section
 -----------------------------------------------*/
@@ -129,7 +156,7 @@ body{
     box-shadow: 0px 6px 6px 0px #0000000D;
     margin-bottom: 73px; /* Space to the next section */
     width: 100%;
-    }
+}
 
 /* Formatting image in the about card */
 .about-card img{
@@ -157,7 +184,6 @@ body{
 /* Formatting text in the about card */
 .header1 {
     color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
@@ -167,7 +193,6 @@ body{
 /* Formatting text in the about card */
 .header2 {
     color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 46px;
     line-height: 100%;
@@ -178,7 +203,6 @@ body{
 /* Formatting text in the about card */
 .header3 {
     color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
@@ -188,7 +212,6 @@ body{
 
 /* Formatting text in the about card */
 .ventus{
-    font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 46px;
     line-height: 100%;
@@ -220,40 +243,11 @@ body{
 
 /* Formatting images in the latest trends cards */
 .latest-trends img{
-    width:100% ;
-    height: 360.3px;
+    width:100%;
+    max-height: 360.3px;
     border-radius: 20px;
     object-fit: cover;
     flex-shrink: 0; /* Prevents shrinking */
-}
-
-/* Formatting of the tags on the latest trends article according to Figma*/
-.btn {
-    position: absolute;
-    width: 233.95px;
-    height: 36.49px;
-    border-radius: 40px;
-    border: none;
-    background: #262626;
-    color: white;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    cursor: pointer;
-    left:47.27px;
-    top: 23.34px;
-}
-
-/* Adding hovering effect on tags - white border around*/
-.btn:hover{
-    border: 2px solid #FFFFFF;
-}
-
-/* Adding hovering effect on author's image*/
-.card-content img:hover{
-    transform: scale(1.1);
 }
 
 /* Formatting card content */
@@ -279,8 +273,11 @@ body{
     margin-left: auto;
 }
 
+/* Formatting tet direction on the latest trend card */
 .card-text {
+    display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 /* Formatting of the details (author, date) on articles*/
@@ -290,68 +287,6 @@ body{
     align-items: center;
 }
 
-
-
-
-/*---------------------------------------*/
-
-/*-----------------------------------------------
-  "Read More" Button
------------------------------------------------*/
-
-/* Formatting "read more" image */
-.read-more img {
-    width: 21.25px;
-    height: 13px;
-}
-
-/* Formatting "read more" text */
-.read-more span {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 24%;
-    color: #4CE0D7;
-}
-
-/* Formatting "read more" button */
-.read-more {
-    margin-top: 30px;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Adding hovering effect on "read more" links - increase in size*/
-.read-more:hover{
-    transform: scale(1.1);
-}
-
-.read-more:hover img {
-    transform: translateX(5px);
-}
-
-/* Article texts */
-.p{
-font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #262626;
-}
-
-/* Article titles */
-h3{
-    font-weight: 700;
-    font-size: 26px;
-    color: #262626;
-    line-height: 100%;
-    letter-spacing: 0%;
-    margin-bottom: 23px;
-}
 
 /* Formatting of the details (author, date) on articles*/
 .details{
@@ -366,116 +301,8 @@ h3{
     gap: 60px;
 }
 
-
-
-/* Formatting image of the author inserted in the card content */
-.author img {
-    width: 65.67px;
-    height: 50.77px;
-    border-radius: 50%;
-    opacity: 1;
-}
-
-/* Adding hovering effect on author's image*/
-.author img:hover{
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-/* Formatting color of author's name*/
-.author-name {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* Adding hovering effect on author's name*/
-.author-name:hover{
-    color: #262626;
-    cursor: pointer;
-}
-
-/* Positioning author section (image and name) */
-.author{
-    display: flex;
-    align-items: center;
-    gap: 16.86px;
-}
-
-
-
-/*---------------------------------------*/
-
-
-/* Mobile and Tablets */
-@media screen and (max-width: 767px) {
-    
-    .latest-trends-content {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    /* Stack author/date and "COMING IN HOT!" vertically */
-    .details-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .details{
-        margin-top: 0;
-    }
-    .small-card {
-        margin-left: 0;
-        width: auto;
-        padding: 5px;
-    }
-}
-
-
-
 /*-----------------------------------------------
-  Typography 
------------------------------------------------*/
-
-/* Section titles */
-h2{
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #262626;
-}
-
-/* Article titles */
-h3{
-    font-weight: 700;
-    font-size: 26px;
-    color: #262626;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-
-/* Adding hovering effect on articles */
-.horizontal-card h3:hover,
-.vertical-card h3:hover {
-    color: #4CE0D7; 
-}
-
-/* Article texts */
-p{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #262626;
-}
-
-/* Space between section title and horizontal cards */
-.articles h2 {
-    margin-bottom: 55.04px; 
-}
-
-/*-----------------------------------------------
-  Articles Section Container
+  Articles Section
 -----------------------------------------------*/
 
 /*-----------------------------------------------
@@ -526,7 +353,6 @@ p{
     display: flex;          
     flex-direction: column;
     gap: 58px; /* Gap between cards */
-    margin-bottom: 88.2px; /* Space between vertical cards and footer */
 }
 
 /* Formatting vertical cards */
@@ -552,9 +378,224 @@ p{
     flex-shrink: 0; /* Prevents shrinking */
 }
 
+/* Formatting card content */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*-----------------------------------------------
+  Author
+-----------------------------------------------*/
+
+/* Formatting image of the author inserted in the card content */
+.author img {
+    width: 65.67px;
+    height: 50.77px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* Adding hovering effect on author's image*/
+.author img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Formatting of the details (author, date) on articles*/
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 60px;
+    margin-top: 23.34px;
+}
+
+/* Formatting color of author's name*/
+.author-name {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Adding hovering effect on author's name*/
+.author-name:hover{
+    color: #262626;
+    cursor: pointer;
+}
+
+/* Positioning author section (image and name) */
+.author{
+    display: flex;
+    align-items: center;
+    gap: 16.86px;
+}
+
+/*-----------------------------------------------
+  Tags
+-----------------------------------------------*/
+
+/* Formatting of the tags on articles according to Figma*/
+.tag {
+    position: absolute;
+    width: 175.44px;
+    height: 36.49px;
+    border-radius: 40px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Tag positions on horizontal cards*/
+.horizontal-card .tag {
+    top: 20.67px;
+    left: 34.14px;
+}
+
+/* Tag positions on vertical cards */
+.vertical-card .tag {
+    top: 25.37px;
+    left: 34.14px;
+}
+
+/* Formatting of the tags on the latest trends article according to Figma*/
+.btn {
+    position: absolute;
+    max-width: 233.95px;
+    max-height: 36.49px;
+    left: 47.27px;
+    top: 23.34px;
+}
+
+/* Adding hovering effect on tags - white border around*/
+.tag:hover{
+    border: 2px solid #FFFFFF;
+}
+
+/*-----------------------------------------------
+  "Read More" Button
+-----------------------------------------------*/
+
+/* Formatting "read more" image */
+.read-more img {
+    width: 21.25px;
+    height: 13px;
+}
+
+/* Formatting "read more" text */
+.read-more span {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 24%;
+    color: #4CE0D7;
+}
+
+/* Formatting "read more" button */
+.read-more {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Adding hovering effect on "read more" links - increase in size*/
+.read-more:hover{
+    transform: scale(1.1);
+}
+
+.read-more:hover img {
+    transform: translateX(5px);
+}
+
+/*-----------------------------------------------
+  Footer
+-----------------------------------------------*/
+
+/* Formatting footer */
+.footer{
+    background-color: #FFFFFF;
+    border-top-right-radius: 40px;    
+    border-top-left-radius: 40px; 
+    height: 308px;
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 69px auto 0;
+    padding: 87px 84px 77px;
+    box-shadow: 6px 0px 6px 0px #0000000D;
+}
+ 
+/* Adding logo and social media items in a horizontal view */
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adding social media items in a horizontal view */
+.social-media {
+    display: flex;
+    align-items: center;
+    gap:13px /* Gap between text and icons */
+}
+
+/* Formatting message for social media */
+.subtitle {
+    align-items: center;
+    width: 227px; /* Giving fixed width to keep space between text and icons */
+    opacity: 1;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Formatting social media icons*/
+.image-cards {
+    display: flex;
+    gap: 20px; /* Gap between icons */
+    align-items: center;
+    cursor: pointer;  
+}
+
+/* Adding hovering effects on social media icons*/
+.image-cards img:hover {
+    transform: scale(1.2);
+}
+
+/* Adding divider*/
+hr {
+    margin-top: 77px;
+}
+
+/* Formatting copyright text*/
+.copyright {
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;  
+    margin-top: 34px; /* Space from divider */
+}
+
 /*-----------------------------------------------
   Media Queries to fit different screens
 -----------------------------------------------*/
+
 
 /* Mobile and Tablets */
 @media screen and (max-width: 768px) {
@@ -631,236 +672,6 @@ p{
     }
 }
 
-/*-----------------------------------------------
-  Card Content and Author
------------------------------------------------*/
-
-/* Formatting image of the author inserted in the card content */
-.card-content img {
-    width: 65.67px;
-    height: 50.77px;
-    border-radius: 50%;
-    opacity: 1;
-}
-
-/* Adding hovering effect on author's image*/
-.card-content img:hover{
-    transform: scale(1.1);
-}
-
-/* Formatting card content */
-.card-content {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Formatting of the details (author, date) on articles*/
-.details{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #BCBCBC;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 100%;
-    letter-spacing: 0%;
-    gap: 60px;
-    margin-top: 23.34px;
-}
-
-/* Formatting color of author's name*/
-.author-name {
-    color: inherit;
-    text-decoration: none;
-}
-
-/* Adding hovering effect on author's name*/
-.author-name:hover{
-    color: #262626;
-}
-
-/* Positioning author section (image and name) */
-.author{
-    display: flex;
-    align-items: center;
-    gap: 16.86px;
-}
-
-/*-----------------------------------------------
-  Tags
------------------------------------------------*/
-
-/* Formatting of the tags on articles according to Figma*/
-.tag {
-    position: absolute;
-    width: 175.44px;
-    height: 36.49px;
-    border-radius: 40px;
-    border: none;
-    background: #262626;
-    color: white;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    cursor: pointer;
-}
-
-/* Tag positions on horizontal cards*/
-.horizontal-card .tag {
-    top: 20.67px;
-    left: 34.14px;
-}
-
-/* Tag positions on vertical cards */
-.vertical-card .tag {
-    top: 25.37px;
-    left: 34.14px;
-}
-
-/* Adding hovering effect on tags - white border around*/
-.tag:hover{
-    border: 2px solid #FFFFFF;
-}
-
-/*-----------------------------------------------
-  "Read More" Button
------------------------------------------------*/
-
-/* Formatting "read more" image */
-.read-more img {
-    width: 21.25px;
-    height: 13px;
-}
-
-/* Formatting "read more" text */
-.read-more span {
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 24%;
-    color: #4CE0D7;
-}
-
-/* Formatting "read more" button */
-.read-more {
-    margin-top: 30px;
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-/* Adding hovering effect on "read more" links - increase in size*/
-.read-more:hover{
-    transform: scale(1.1);
-}
-
-.read-more:hover img {
-    transform: translateX(5px);
-}
-
-
-/*-----------------------------------------------
-  Footer
------------------------------------------------*/
-
-/* Formatting footer */
-.footer{
-    background-color: #FFFFFF;
-    border-top-right-radius: 40px;    
-    border-top-left-radius: 40px; 
-    height: 308px;
-    max-width: 1440px; /* Maximum page width */
-    min-width: 320px; /* Minimum page width */
-    margin: 69px auto 0;
-    padding: 87px 84px 77px;
-    box-shadow: 6px 0px 6px 0px #0000000D;
-}
-
-/* Formatting logo */
-.logo {
-    font-family: Cinzel;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-
-/* Formatiing logo span*/
-.logo span {
-    background-color:rgba(76, 224, 215, 1);
-    font-family: Cinzel;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
- 
-/* Adding logo and social media items in a horizontal view */
-.nav-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Adding social media items in a horizontal view */
-.social-media {
-    display: flex;
-    align-items: center;
-    gap:13px /* Gap between text and icons */
-}
-
-/* Formatting message for social media */
-.subtitle {
-    align-items: center;
-    width: 227px; /* Giving fixed width to keep space between text and icons */
-    opacity: 1;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 100%;
-    letter-spacing: 0%;
-}
-
-/* Formatting social media icons*/
-.image-cards {
-    display: flex;
-    gap: 20px; /* Gap between icons */
-    align-items: center;
-    cursor: pointer;  
-}
-
-/* Adding hovering effects on social media icons*/
-.image-cards img:hover {
-    transform: scale(1.2);
-}
-
-/* Adding divider*/
-hr {
-    margin-top: 77px;
-}
-
-/* Formatting copyright text*/
-.copyright {
-    opacity: 1;
-    font-family: Poppins;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;  
-    margin-top: 34px; /* Space from divider */
-}
-
-/*-----------------------------------------------
-  Media Queries to fit different screens
------------------------------------------------*/
 
 /* Mobile and Tablets */
 @media (max-width: 768px) {
@@ -921,5 +732,48 @@ hr {
     /* Reduces gap for small screens*/
     .footer {
         padding: 50px 30px;
+    }
+}
+
+
+/*---------------------------------------*/
+
+
+/* Mobile and Tablets */
+@media screen and (max-width: 767px) {
+    
+    .latest-trends-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Stack author/date and "COMING IN HOT!" vertically */
+    .details-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .details{
+        margin-top: 0;
+    }
+    .small-card {
+        margin-left: 0;
+        width: auto;
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 999px) {
+    .nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
     }
 }
