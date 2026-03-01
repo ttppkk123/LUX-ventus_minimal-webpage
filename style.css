@@ -10,7 +10,13 @@ body{
     background-color: #F9F9F9;
     max-width: 1440px; /* Maximum page width */
     min-width: 320px; /* Minimum page width */
-    margin: 0 auto;
+    margin: 0 auto;  
+}
+
+/* Adding responsive paddings to about, latest trends and articles section */
+.about,
+.latest-trends,
+.articles {
     padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
 }
   
@@ -596,9 +602,12 @@ hr {
   Media Queries to fit different screens
 -----------------------------------------------*/
 
-
 /* Mobile and Tablets */
 @media screen and (max-width: 768px) {
+    /* --------------
+    Articles
+    -----------------*/
+
     /* Stacks horizontal cards vertically */
     .horizontal {
         flex-direction: column;
@@ -640,9 +649,51 @@ hr {
         flex: 1;
     }
 
+    .author img {
+    width: 65.67px;
+    height: 50.77px;
+    }
+
+    .read-more img {
+        width: 21.25px;
+        height: 13px;
+    }
+
     /* Removes extra margin on details */
     .details {
         margin-top: 0;
+    }
+
+    /* --------------
+    Footer
+    -----------------*/
+
+    /* Stacks logo and social media vertically */
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    /* Stacks text and social media icons vertically */
+    .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Adding space between “Let’s Hang Out” and icons */
+    .subtitle {
+    margin-bottom: 10px; 
+    }
+
+    /* Reduces gap for small screens*/
+    .hr{
+        margin-top: 20px;
+    }
+
+    /* Reduces gap for small screens*/
+    .footer {
+        padding: 50px 30px;
     }
 }
 
@@ -664,48 +715,27 @@ hr {
         gap: 15px;
         padding: 15px;
     }
+    
+    .author img {
+    width: 65.67px;
+    height: 50.77px;
+    }
+
+    .read-more img {
+        width: 21.25px;
+        height: 13px;
+    }
 
     .details {
         margin-top: 0px;
         gap: 30px;
         padding: 0px;
     }
-}
 
+    /* --------------
+    Footer
+    -----------------*/
 
-/* Mobile and Tablets */
-@media (max-width: 768px) {
-    /* Stacks logo and social media vertically */
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 30px;
-    }
-    /* Stacks text and social media icons vertically */
-    .social-media {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    /* Adding space between “Let’s Hang Out” and icons */
-    .subtitle {
-    margin-bottom: 10px; 
-    }
-
-    /* Reduces gap for small screens*/
-    .hr{
-        margin-top: 20px;
-    }
-
-    /* Reduces gap for small screens*/
-    .footer {
-        padding: 50px 30px;
-    }
-}
-
-/* Medium screens */
-@media screen and (min-width: 769px) and (max-width: 999px) {
     /* Stacks logo and social media vertically */
     .nav-list {
         align-items: flex-start;
@@ -735,13 +765,12 @@ hr {
     }
 }
 
+/* --------------
+Latest trends
+-----------------*/
 
-/*---------------------------------------*/
-
-
-/* Mobile and Tablets */
 @media screen and (max-width: 767px) {
-    
+    /* Decreases padding*/
     .latest-trends-content {
         padding-left: 10px;
         padding-right: 10px;
@@ -753,9 +782,11 @@ hr {
         align-items: flex-start;
         gap: 10px;
     }
+
     .details{
         margin-top: 0;
     }
+
     .small-card {
         margin-left: 0;
         width: auto;
@@ -763,6 +794,9 @@ hr {
     }
 }
 
+/* --------------
+Header
+-----------------*/
 
 @media (max-width: 999px) {
     .nav {
