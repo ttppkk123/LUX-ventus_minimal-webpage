@@ -32,7 +32,7 @@ body{
     font-weight: 700;
     font-size: 32px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     color: #262626;
 }
 
@@ -42,8 +42,8 @@ body{
     font-weight: 700;
     font-size: 26px;
     color: #262626;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1.5;
+    letter-spacing: 0px;
 }
 
 /* Adding hovering effect on topics */
@@ -66,8 +66,8 @@ body{
 .card-content p{
     font-weight: 400;
     font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    line-height: 1.5;
+    letter-spacing: 0px;
     color: #262626;
 }
 
@@ -200,7 +200,7 @@ body{
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
-    letter-spacing: 23%;
+    letter-spacing: 0.23em;
 }
 
 /* Formatting text in the about card */
@@ -209,7 +209,7 @@ body{
     font-weight: 400;
     font-size: 46px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     max-width: 650px;
 }
 
@@ -219,7 +219,7 @@ body{
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     max-width: 494px;
 }
 
@@ -228,7 +228,7 @@ body{
     font-weight: 700;
     font-size: 46px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     background: linear-gradient(90deg, #4CE0D7 43.06%, #8BA9F4 100%);
     -webkit-background-clip: text; 
     color: transparent;
@@ -361,7 +361,7 @@ body{
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
-    letter-spacing: 24%;
+    letter-spacing: 0.24em;
     color: #F25E5E;
     margin-left: auto;
 }
@@ -390,7 +390,7 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     gap: 60px;
 }
 
@@ -434,6 +434,7 @@ body{
     height: 278.09px;
     border-radius: 20px;
     object-fit: cover;
+    object-position: middle right;
     flex-shrink: 0; /* Prevents shrinking */
 }
 
@@ -468,6 +469,7 @@ body{
     height: 100%;
     border-radius: 20px;
     object-fit: cover; 
+    object-position: middle right;
     flex-shrink: 0; /* Prevents shrinking */
 }
 
@@ -506,7 +508,7 @@ body{
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     gap: 60px;
     margin-top: 23.34px;
 }
@@ -546,7 +548,7 @@ body{
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     text-align: center;
     cursor: pointer;
 }
@@ -592,7 +594,7 @@ body{
     font-weight: 700;
     font-size: 12px;
     line-height: 100%;
-    letter-spacing: 24%;
+    letter-spacing: 0.24em;
     color: #4CE0D7;
 }
 
@@ -654,7 +656,7 @@ body{
     font-weight: 700;
     font-size: 26px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0px;
 }
 
 /* Formatting social media icons*/
@@ -681,7 +683,7 @@ hr {
     font-weight: 700;
     font-size: 14px;
     line-height: 100%;
-    letter-spacing: 0%;  
+    letter-spacing: 0px;  
     margin-top: 34px; /* Space from divider */
 }
 
@@ -812,7 +814,7 @@ hr {
 }
 
 /* Medium screens */
-@media screen and (min-width: 769px) and (max-width: 999px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
     .vertical-card {
         flex-direction: column; /* Stacks image above content */
         height: auto;
@@ -845,11 +847,14 @@ hr {
         gap: 30px;
         padding: 0px;
     }
+}
 
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 999px) {    
     /* --------------
     Footer
     -----------------*/
-
+    
     /* Stacks logo and social media vertically */
     .nav-list {
         align-items: flex-start;
@@ -875,7 +880,7 @@ hr {
 
     /* Reduces gap for small screens*/
     .footer {
-        padding: 50px 30px;
+        padding: 50px 30px 10px;
     }
 }
 
