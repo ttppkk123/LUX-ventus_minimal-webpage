@@ -105,13 +105,75 @@ body{
 
 /* Adding responsive design for small screens*/
 @media (max-width: 767px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 12px;
+        padding-top: 30px;
+    }
+    
+    .common {
+        display: flex;
+        flex-direction: column;   /* image on top, text below */
+        justify-content: center;
+        padding: 15px 10px;
+        max-height: 60px;
+    }
+
+    .common img {
+        width: 40px;
+        height: 40px;
+    }
+
+    
+    .common h1 {
+        font-size: 12px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    /* Adding hover effect on cards */
+    .common:hover{
+        background-color: #4CE0D7;
+    }
+
     .view-more {
-        padding-left: 10px;
-        padding-right: 10px;  
+        display: none;
     }
 }
 
+/* Adding responsive design for medium screens*/
+@media (max-width: 1023px) {
+    .common {
+        flex: 1 1 100%;
+        max-width: none;
+        padding: 15px;
+        min-height: 150px;
+    }
 
+    .common img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .common h1 {
+        font-size: 12px;
+        margin-top: 6px;
+        margin-bottom: 5px;
+    }
+
+    .view-more {
+        padding: 6px 16px;
+        bottom: 20px;
+    }
+
+    .cards {
+        gap: 10px;
+        padding-top: 30px;
+    }
+}
+
+/* Adding responsive design for big screens*/
 @media (min-width: 1024px) {
 
     .view-more {
