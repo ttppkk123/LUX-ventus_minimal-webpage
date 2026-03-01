@@ -10,16 +10,887 @@ body{
     background-color: #F9F9F9;
     max-width: 1440px; /* Maximum page width */
     min-width: 320px; /* Minimum page width */
-    margin: 0 auto;
+    margin: 0 auto;  
+}
+
+/* Adding responsive paddings to about, latest trends and articles section */
+.about,
+.topics,
+.latest-trends,
+.articles {
+    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
+}
+  
+/*-----------------------------------------------
+  Typography 
+-----------------------------------------------*/
+
+/* Formatting section titles */
+.articles h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/* Formatting article titles */
+.card-text h3, 
+.card-content h3{
+    font-weight: 700;
+    font-size: 26px;
+    color: #262626;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Adding hovering effect on articles */
+.horizontal-card h3:hover,
+.vertical-card h3:hover,
+.card-text h3:hover {
+    color: #4CE0D7; 
+}
+
+/* Article texts */
+.card-text p, 
+.card-content p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #262626;
+}
+
+/* Space between section title and horizontal cards */
+.articles h2 {
+    margin-bottom: 55.04px; 
 }
 
 /*-----------------------------------------------
-  Topics Section
+  Header section
 -----------------------------------------------*/
 
-.topics {
-    padding: 0 clamp(0px, 5%, 118px); /* Adding responsive padding - left & right */
+/* styleing header */
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px clamp(20px, 5vw, 80px);
+    position: relative;
 }
+
+/* Formatting logo image */
+.logo img{
+    width: 234px;                   
+    height: 49px;  
+}
+
+/* Positioning logo */
+.logo a {                  
+    display: flex;
+    align-items: center;
+    justify-content: center;                  
+}
+
+/* Formatting navigation bar*/
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(5px, 1vw, 50px);
+}
+
+/* Formatting navigation bar components*/
+.nav a {
+    color: #262626;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    transition: .3s;
+    padding:8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adding hovering effect on navigation bar*/
+.nav a:hover {
+    background-color: #4CE0D7;
+    border-radius: 40px;
+}
+
+/* Formatting search bar icon*/
+.search-bar img {
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+}
+
+/* Formatting burger for small screens*/
+.burger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    background-color: #4CE0D7;
+    border-radius: 40px;
+    padding:0px 20px;
+}
+
+/*-----------------------------------------------
+  About section
+-----------------------------------------------*/
+
+/*Formatting about card*/
+.about-card{
+    display: flex;
+    flex-wrap: wrap; /* Wrap card */
+    justify-content: center; /* Center card horizontally */
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: #D9D9D9;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    margin-bottom: 73px; /* Space to the next section */
+    width: 100%;
+}
+
+/* Formatting image in the about card */
+.about-card img{
+    width:100% ;
+    max-height: 559px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents shrinking */
+    background: #00000054;
+    background: #D9D9D9;
+    object-position: top right;
+    filter: brightness(60%); /* 60% brightness = darker */
+}
+
+/* Text placement in about section */
+.about-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 57px;
+    gap: 22px;
+}
+
+/* Formatting text in the about card */
+.header1 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 23%;
+}
+
+/* Formatting text in the about card */
+.header2 {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 650px;
+}
+
+/* Formatting text in the about card */
+.header3 {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 494px;
+}
+
+/* Formatting text in the about card */
+.ventus{
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: linear-gradient(90deg, #4CE0D7 43.06%, #8BA9F4 100%);
+    -webkit-background-clip: text; 
+    color: transparent;
+}
+
+/*-----------------------------------------------
+  Latest trends section
+-----------------------------------------------*/
+  
+/*Formatting latest trends card*/
+.latest-trends-card{
+    display: flex;
+    flex-wrap: wrap; /* Wrap card */
+    justify-content: center; /* Center card horizontally */
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    margin-bottom: 97px; /* Space to the next section */
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+/* Formatting images in the latest trends cards */
+.latest-trends img{
+    width:100%;
+    max-height: 360.3px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Formatting card content */
+.latest-trends-content {
+    margin-top: 23.34px;
+    padding-left: 64.34px;
+    padding-right: 64.34px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 1;
+}
+
+/* Formatting coming it hot text */
+.small-card {
+    width: 216px;
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 24%;
+    color: #F25E5E;
+    margin-left: auto;
+}
+
+/* Formatting tet direction on the latest trend card */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Formatting of the details (author, date) on articles*/
+.details-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* Formatting of the details (author, date) on articles*/
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 60px;
+}
+
+/*-----------------------------------------------
+  Articles Section
+-----------------------------------------------*/
+
+/*-----------------------------------------------
+  Horizontal Cards (Top 2 Articles)
+-----------------------------------------------*/
+
+/* Adding first two articles in a horizontal view */
+.horizontal {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards */
+    gap: 44px; /* Gap between cards */
+    justify-content: center; /* Center cards horizontally */
+    margin-bottom: 88.2px; /* Space between horizontal and vertical cards */
+}
+
+/* Formatting horizontal cards */
+.horizontal-card {
+    flex: 1 1 calc((100% - 44px)/2); /* Two cards per row minus gap */
+    min-width: 280px; /* Prevents shrinking below 280px */
+    min-height: 670px; /* Prevents shrinking below 670px */
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 691.22px; /* Limits max width of each card */
+}
+
+/* Formatting images in the horizontal cards */
+.horizontal-card img {
+    width: 100%;
+    height: 278.09px;
+    border-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/*-----------------------------------------------
+  Vertical Cards (Last 3 Articles)
+-----------------------------------------------*/
+
+/* Adding last three articles in a vertical view */
+.vertical {
+    display: flex;          
+    flex-direction: column;
+    gap: 58px; /* Gap between cards */
+}
+
+/* Formatting vertical cards */
+.vertical-card {
+    display: flex;
+    flex-direction: row; /* Image and content side by side */
+    gap: 45.49px; /* Gap between image and article */
+    flex-grow: 1;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 6px 6px 0px #0000000D;
+    height: 368px;
+    border-radius: 20px;
+}
+
+/* Formatting images in the vertical cards */
+.vertical-card img {
+    width: 547.51px;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover; 
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Formatting card content */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*-----------------------------------------------
+  Author
+-----------------------------------------------*/
+
+/* Formatting image of the author inserted in the card content */
+.author img {
+    width: 65.67px;
+    height: 50.77px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+/* Adding hovering effect on author's image*/
+.author img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Formatting of the details (author, date) on articles*/
+.details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #BCBCBC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 60px;
+    margin-top: 23.34px;
+}
+
+/* Formatting color of author's name*/
+.author-name {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Adding hovering effect on author's name*/
+.author-name:hover{
+    color: #262626;
+    cursor: pointer;
+}
+
+/* Positioning author section (image and name) */
+.author{
+    display: flex;
+    align-items: center;
+    gap: 16.86px;
+}
+
+/*-----------------------------------------------
+  Tags
+-----------------------------------------------*/
+
+/* Formatting of the tags on articles according to Figma*/
+.tag {
+    position: absolute;
+    width: 175.44px;
+    height: 36.49px;
+    border-radius: 40px;
+    border: none;
+    background: #262626;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Tag positions on horizontal cards*/
+.horizontal-card .tag {
+    top: 20.67px;
+    left: 34.14px;
+}
+
+/* Tag positions on vertical cards */
+.vertical-card .tag {
+    top: 25.37px;
+    left: 34.14px;
+}
+
+/* Formatting of the tags on the latest trends article according to Figma*/
+.btn {
+    position: absolute;
+    max-width: 233.95px;
+    max-height: 36.49px;
+    left: 47.27px;
+    top: 23.34px;
+}
+
+/* Adding hovering effect on tags - white border around*/
+.tag:hover{
+    border: 2px solid #FFFFFF;
+}
+
+/*-----------------------------------------------
+  "Read More" Button
+-----------------------------------------------*/
+
+/* Formatting "read more" image */
+.read-more img {
+    width: 21.25px;
+    height: 13px;
+}
+
+/* Formatting "read more" text */
+.read-more span {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 24%;
+    color: #4CE0D7;
+}
+
+/* Formatting "read more" button */
+.read-more {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Adding hovering effect on "read more" links - increase in size*/
+.read-more:hover{
+    transform: scale(1.1);
+}
+
+.read-more:hover img {
+    transform: translateX(5px);
+}
+
+/*-----------------------------------------------
+  Footer
+-----------------------------------------------*/
+
+/* Formatting footer */
+.footer{
+    background-color: #FFFFFF;
+    border-top-right-radius: 40px;    
+    border-top-left-radius: 40px; 
+    height: 308px;
+    max-width: 1440px; /* Maximum page width */
+    min-width: 320px; /* Minimum page width */
+    margin: 69px auto 0;
+    padding: 87px 84px 77px;
+    box-shadow: 6px 0px 6px 0px #0000000D;
+}
+ 
+/* Adding logo and social media items in a horizontal view */
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adding social media items in a horizontal view */
+.social-media {
+    display: flex;
+    align-items: center;
+    gap:13px /* Gap between text and icons */
+}
+
+/* Formatting message for social media */
+.subtitle {
+    align-items: center;
+    width: 227px; /* Giving fixed width to keep space between text and icons */
+    opacity: 1;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* Formatting social media icons*/
+.image-cards {
+    display: flex;
+    gap: 20px; /* Gap between icons */
+    align-items: center;
+    cursor: pointer;  
+}
+
+/* Adding hovering effects on social media icons*/
+.image-cards img:hover {
+    transform: scale(1.2);
+}
+
+/* Adding divider*/
+hr {
+    margin-top: 77px;
+}
+
+/* Formatting copyright text*/
+.copyright {
+    opacity: 1;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;  
+    margin-top: 34px; /* Space from divider */
+}
+
+/*-----------------------------------------------
+  Media Queries to fit different screens
+-----------------------------------------------*/
+
+/* Mobile and Tablets */
+@media screen and (max-width: 768px) {
+    /* --------------
+    About section
+    -----------------*/
+    /* Positioning text in the about card */
+    .about-text {   
+        top: 50%;
+        left: 10px;
+        gap: 15px;
+    }
+
+    /* Formatting text in the about card */
+    .header2 {
+        font-size: 40px;
+        max-width: 90%;
+    }
+
+    /* Formatting text in the about card */
+    .header3 {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    /* Formatting text in the about card */
+    .ventus{
+        font-size: 40px;
+    }
+    
+    /* --------------
+    Articles
+    -----------------*/
+
+    /* Stacks horizontal cards vertically */
+    .horizontal {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px; 
+    }
+
+    /* Gives horizontal cards full width */
+    .horizontal-card {
+        flex: 1 1 100%;           
+        min-width: 0;             
+    }
+
+    /* Gives vertical cards full width */
+    .vertical {
+        flex: 1 1 100%;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .vertical-card {
+        flex: 1 1 100%;  
+        gap: 0px;         
+        min-width: 0px; 
+        min-height: 670px;
+        flex-direction: column; /* Stacks image above content */
+        width: 100%;
+        max-width: 691.22px;
+    }
+
+    /* Vertical card images responsive */
+    .vertical-card img {
+        width: 100%;
+        height: 278.09px;
+    }
+
+    /* Card content fills remaining space */
+    .card-content {
+        flex: 1;
+    }
+
+    .author img {
+        width: 65.67px;
+        height: 50.77px;
+    }
+
+    .read-more img {
+        width: 21.25px;
+        height: 13px;
+    }
+
+    /* Removes extra margin on details */
+    .details {
+        margin-top: 0;
+    }
+
+    /* --------------
+    Footer
+    -----------------*/
+
+    /* Stacks logo and social media vertically */
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    /* Stacks text and social media icons vertically */
+    .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Adding space between “Let’s Hang Out” and icons */
+    .subtitle {
+        margin-bottom: 10px; 
+    }
+
+    /* Reduces gap for small screens*/
+    .hr{
+        margin-top: 20px;
+    }
+
+    /* Reduces gap for small screens*/
+    .footer {
+        padding: 50px 30px;
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 769px) and (max-width: 999px) {
+    .vertical-card {
+        flex-direction: column; /* Stacks image above content */
+        height: auto;
+        gap: 20px;
+    }
+
+    .vertical-card img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .card-content {
+        flex: 1;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .author img {
+        width: 65.67px;
+        height: 50.77px;
+    }
+
+    .read-more img {
+        width: 21.25px;
+        height: 13px;
+    }
+
+    .details {
+        margin-top: 0px;
+        gap: 30px;
+        padding: 0px;
+    }
+
+    /* --------------
+    Footer
+    -----------------*/
+
+    /* Stacks logo and social media vertically */
+    .nav-list {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Stacks text and social media icons vertically */
+    .social-media {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Adding space between “Let’s Hang Out” and icons */
+    .subtitle {
+        margin-bottom: 10px; 
+    }
+
+    /* Reduces gap for small screens*/
+    .hr{
+        margin-top: 20px;
+    }
+
+    /* Reduces gap for small screens*/
+    .footer {
+        padding: 50px 30px;
+    }
+}
+
+/* --------------
+Latest trends
+-----------------*/
+
+@media screen and (max-width: 767px) {
+    /* Decreases padding*/
+    .latest-trends-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Stack author/date and "COMING IN HOT!" vertically */
+    .details-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .details{
+        margin-top: 0;
+    }
+
+    .small-card {
+        margin-left: 0;
+        width: auto;
+        padding: 5px;
+    }
+}
+
+/* --------------
+Header
+-----------------*/
+
+@media (max-width: 999px) {
+    .nav {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .search-bar {
+        display: none;
+    }
+}
+
+/* Responsive design for mobiles */
+@media screen and (max-width: 425px) {
+    /* --------------
+    About section
+    -----------------*/
+    /* Positioning text in the about card */
+    .about-text {   
+        top: 30%;
+        left: 10px;
+        gap: 15px;
+    }
+
+    /* Formatting text in the about card */
+    .header2 {
+        font-size: 30px;
+        max-width: 90%;
+    }
+
+    /* Formatting text in the about card */
+    .header3 {
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    /* Formatting text in the about card */
+    .ventus{
+        font-size: 30px;
+    }
+
+    /* --------------
+    Logo 
+    -----------------*/
+    /* Formatting logo for mobile */
+    .logo img{
+        width: 200px;                   
+        height: 40px; 
+    }
+
+    /* Formatting burger menu for mobile */
+    .burger {
+        font-size: 22px;
+        padding:0px 16px;
+    }
+
+    /* --------------
+    Footer 
+    -----------------*/
+    /* Formatting footer for mobile */
+    .footer{
+        gap: 5px;
+        padding: 20px 20px 20px;
+    }
+
+    /* Formatting social media text for mobile */
+    .subtitle {
+        font-size: 22px;
+    }
+}
+
+
 
 /* Section title styling  */
 .section-title h2 {
@@ -180,3 +1051,7 @@ body{
         padding: 8px clamp(20px, 2vw, 40px);
     }
 }
+
+
+
+
